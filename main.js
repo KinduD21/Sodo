@@ -50,8 +50,6 @@ function makeStickyHeader() {
   }
 }
 
-window.addEventListener("scroll", () => console.log("Hello world!")); // <-- HOMEWORK
-
 // Login Modal Window
 
 loginBtn.addEventListener("click", modalInputOpen);
@@ -82,7 +80,7 @@ document.querySelectorAll(".anchor_wrapper button").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
     // this.getAttribute("data-href")
-    document.querySelector(`section${e.target.dataset.href}`).scrollIntoView({
+    document.querySelector(`section#${e.target.dataset.href}`).scrollIntoView({
       behavior: "smooth",
     });
   });
